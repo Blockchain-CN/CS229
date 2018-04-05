@@ -1,6 +1,8 @@
 
-# machine learning PRACTICE
+# machine learning PRACTICE  
+andrew NG CS229 extracurricular practice
 
-## LR.py -> linear regression(LR)
-
-## LWR.py -> locally weight regression(LWR)
+## Linear Regression
+- linearR
+    - LR.py -> linear regression(LR)
+    - LWR.py -> locally weight regression(LWR)
