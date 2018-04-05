@@ -3,4 +3,4 @@
 
 ## LR.py -> linear regression(LR)
 
-## LWR.py -> lowss regression(LWR)
+## LWR.py -> locally weight regression(LWR)
