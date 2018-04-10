@@ -27,9 +27,14 @@ temp['x0'] = 1
 X = temp.iloc[:, [1, 0]]
 Y = iris['setosa'].reshape(len(iris), 1)
 
-# 批量梯度上升降
+# 批量梯度上升/下降
 m, n  = X.shape
 alpha = 0.0065
+```
+不同学习率影响这么大么？？？？
+试试 0.065(学习率太大，theta太大，h太接近1，log(1-h)直接爆炸)
+0.01(很诡异的收敛形态)
+```
 theta_g = np.zeros((n,1))
 maxCycles = 3000
 J = pd.Series(np.arange(maxCycles, dtype = float))
@@ -42,6 +47,8 @@ for i in range(maxCycles):
     theta_g -= alpha * grad
 print theta_g
 
+J.plot()
+plt.show()
 
 # newton method
 theta_n = np.zeros((n,1))
@@ -51,11 +58,10 @@ for i in range(maxCycles):
     h = logit(dot(X, theta_n)) #估计值
     C[i] = -(1/100.)*np.sum(Y*np.log(h)+(1-Y)*np.log(1-h)) #计算损失函数值
     error = h - Y #误差
-    grad = dot(X.T, error) #梯度
+    grad = dot(X.T, error) #梯度 Jacobian矩阵
     A = h*(1-h)* np.eye(len(X))
     H = np.mat(X.T)*A*np.mat(X) #海瑟矩阵, H = X`AX
     theta_n -= inv(H)*grad
 print theta_n
-C.plot()
+#C.plot()
 
-plt.show()
