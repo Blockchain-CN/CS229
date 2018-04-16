@@ -16,7 +16,8 @@ Andrew NG CS229 extracurricular practice
     [局部加权线性回归](https://blog.csdn.net/caimouse/article/details/60334243)  
     
 ## Logistic Regression
-1. logistic_regression.py       逻辑回归  
+1. iris.csv      测试数据
+2. logistic_regression.py       逻辑回归
     a. batch gradient ascent        批量梯度上升  
     b. Newton method        牛顿方法  
     [逻辑回归-梯度下降／梯度上升](https://blog.csdn.net/xiaoxiangzi222/article/details/55097570)   
@@ -24,4 +25,13 @@ Andrew NG CS229 extracurricular practice
     [牛顿方法原理2](https://www.zhihu.com/question/20690553)  
     [Jacobian & Hessian](https://jingyan.baidu.com/article/cb5d6105c661bc005c2fe024.html)  
     [各种收敛方法对比](https://www.cnblogs.com/shixiangwan/p/7532830.html)  
-    [Python 代码](https://www.cnblogs.com/sumai/p/5221067.html)      
+    [python 代码](https://www.cnblogs.com/sumai/p/5221067.html)
+
+## Softmax Regression
+1. train.csv      测试数据(minst)
+2. softmax.py       softmax 回归
+    a. stohastic gradient decent        随机选取样本来更新所有分类组的权重
+    [softmax 原理](https://www.zhihu.com/question/23765351)
+    [softmax 算法推导](http://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92)
+    [python 代码](https://blog.csdn.net/wds2006sdo/article/details/53699778?utm_source=itdadao&utm_medium=referral)
+

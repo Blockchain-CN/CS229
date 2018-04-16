@@ -30,20 +30,21 @@ Y = iris['setosa'].reshape(len(iris), 1)
 # 批量梯度上升/下降
 m, n  = X.shape
 alpha = 0.0065
-```
+
+"""
 不同学习率影响这么大么？？？？
 试试 0.065(学习率太大，theta太大，h太接近1，log(1-h)直接爆炸)
 0.01(很诡异的收敛形态)
-```
+"""
 theta_g = np.zeros((n,1))
 maxCycles = 3000
 J = pd.Series(np.arange(maxCycles, dtype = float))
 
 for i in range(maxCycles):
     h = logit(dot(X, theta_g))
-    J[i] = -(1/100.)*np.sum(Y*np.log(h)+(1-Y)*np.log(1-h)) #计算损失函数值
-    error = h - Y #误差
-    grad = dot(X.T, error) #梯度
+    J[i] = -(1/100.)*np.sum(Y*np.log(h)+(1-Y)*np.log(1-h))  # 计算损失函数值
+    error = h - Y  # 误差
+    grad = dot(X.T, error)  # 梯度
     theta_g -= alpha * grad
 print theta_g
 
@@ -53,7 +54,7 @@ plt.show()
 # newton method
 theta_n = np.zeros((n,1))
 maxCycles = 10
-C = pd.Series(np.arange(maxCycles, dtype = float)) #损失数值
+C = pd.Series(np.arange(maxCycles, dtype = float))  # 损失数值
 for i in range(maxCycles):
     h = logit(dot(X, theta_n)) #估计值
     C[i] = -(1/100.)*np.sum(Y*np.log(h)+(1-Y)*np.log(1-h)) #计算损失函数值

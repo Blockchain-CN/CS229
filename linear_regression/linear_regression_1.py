@@ -31,10 +31,11 @@ theta_g = np.array([1., 1., 1., 1.])
 theta_g = theta_g.reshape(4,1)
 theta_n = np.array([1., 1., 1., 1.])
 theta_n = theta_n.reshape(4,1)
-```
+"""
 学习率不能太大，否则对于"简便的写法"会不收敛
 为什么后面哪个对学习率的容忍比较大？ 是不是和一个特征纬度更新后再更新后面的纬度有关？
-```
+"""
+
 alpha = 0.03
 X0 = X.iloc[:, 0].reshape(150, 1)
 X1 = X.iloc[:, 1].reshape(150, 1)
