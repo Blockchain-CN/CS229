@@ -30,8 +30,8 @@ Andrew NG CS229 extracurricular practice
 ## Softmax Regression
 1. train.csv      测试数据(minst)
 2. softmax.py       softmax 回归
-    a. stohastic gradient decent        随机选取样本来更新所有分类组的权重
-    [softmax 原理](https://www.zhihu.com/question/23765351)
-    [softmax 算法推导](http://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92)
-    [python 代码](https://blog.csdn.net/wds2006sdo/article/details/53699778?utm_source=itdadao&utm_medium=referral)
+    a. stohastic gradient decent        随机选取样本来更新所有分类组的权重     
+    [softmax 原理](https://www.zhihu.com/question/23765351)   
+    [softmax 算法推导](http://ufldl.stanford.edu/wiki/index.php/Softmax%E5%9B%9E%E5%BD%92)   
+    [python 代码](https://blog.csdn.net/wds2006sdo/article/details/53699778?utm_source=itdadao&utm_medium=referral)        
 
